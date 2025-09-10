@@ -18,8 +18,8 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  // 👇 Important for Vercel / production
-  base: "./",
+  // 👇 Fix for Vercel (ensures assets resolve correctly)
+  base: "/",
   build: {
     outDir: "dist",
     emptyOutDir: true,
